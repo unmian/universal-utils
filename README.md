@@ -32,6 +32,8 @@
   - **isUndefined:** 是否为 undefined
   - **isExist:** 是否为 null 或者 undefined
   - **isEmpty:** 是否为 null、undefined、false 或者空字符串
+- **Date:** 日期相关
+  - **formate:** Date 格式化
 - **FormData:** 表单数据相关
   - **toFormData:** Object 转 FormData
   - **toObject:** FormData 转 Object
@@ -44,10 +46,15 @@
 
 ## 更新日志
 
+### 0.2.0
+
+- feat: 新增日期模块
+- feat: 新增 Date.formate 方法
+
 ### 0.1.1
 
-- 修复 isExist 方法逻辑错误
+- fix: 修复 isExist 方法逻辑错误
 
 ### ~~0.1.0~~
 
-- 第一个版本
+- feat: 第一个版本
