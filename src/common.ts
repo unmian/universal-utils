@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-23 15:52:26
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-25 08:36:38
+ * @LastEditTime: 2022-08-25 11:30:56
  * @FilePath: /universal-utils/src/common.ts
  * @Description: 通用
  */
@@ -26,7 +26,7 @@ export const isUndefined = (param: any): boolean => param === undefined;
  * @param {any} param 参数
  * @return {boolean}
  */
-export const isExist = (param: any): boolean => param === null || param === undefined;
+export const isExist = (param: any): boolean => param !== null && param !== undefined;
 
 /**
  * @description: 是否为空

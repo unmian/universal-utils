@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-23 17:27:38
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-25 08:36:56
+ * @LastEditTime: 2022-08-25 11:31:45
  * @FilePath: /universal-utils/tests/common.test.ts
  * @Description: 通用测试用例
  */
@@ -38,14 +38,14 @@ describe("func isUndefined", () => {
 
 describe("func isExist", () => {
   test("is exist", () => {
-    expect(UTILS.isExist(null)).toBe(true);
-    expect(UTILS.isExist(undefined)).toBe(true);
+    expect(UTILS.isExist(false)).toBe(true);
+    expect(UTILS.isExist("")).toBe(true);
+    expect(UTILS.isExist(0)).toBe(true);
   });
 
   test("is not exist", () => {
-    expect(UTILS.isExist(false)).toBe(false);
-    expect(UTILS.isExist("")).toBe(false);
-    expect(UTILS.isExist(0)).toBe(false);
+    expect(UTILS.isExist(null)).toBe(false);
+    expect(UTILS.isExist(undefined)).toBe(false);
   });
 });
 
