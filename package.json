@@ -1,0 +1,64 @@
+{
+  "name": "@unmian/universal-utils",
+  "version": "0.1.0",
+  "author": {
+    "name": "Quarter",
+    "email": "master@shiruihua.cn"
+  },
+  "description": "Universal utils for daily development",
+  "keywords": [
+    "Javascript",
+    "TypeScript",
+    "utils"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unmian/universal-utils"
+  },
+  "files": [
+    "lib",
+    "types"
+  ],
+  "main": "lib/index.umd.js",
+  "module": "lib/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./lib/index.es.js",
+      "require": "./lib/index.umd.js"
+    }
+  },
+  "typings": "types/index.d.ts",
+  "homepage": "https://github.com/unmian/universal-utils",
+  "bugs": "https://github.com/unmian/universal-utils/issues",
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "vitest dev",
+    "lint": "f2elint scan",
+    "test": "vitest run",
+    "build": "vite build",
+    "publish:private": "pnpm build && pnpm publish --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/",
+    "unpublish:private": "pnpm unpublish  --force --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/"
+  },
+  "dependencies": {
+    "jsencrypt": "3.2.1",
+    "jshashes": "1.0.8"
+  },
+  "devDependencies": {
+    "f2elint": "2.2.1",
+    "husky": "8.0.1",
+    "jsdom": "20.0.0",
+    "tsc": "2.0.4",
+    "typescript": "4.7.4",
+    "vite": "3.0.9",
+    "vite-plugin-dts": "1.4.1",
+    "vitest": "0.22.1"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "ie >= 10",
+    "iOS >= 8",
+    "Android >= 4"
+  ]
+}
