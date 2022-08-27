@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-23 09:49:58
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-23 17:06:39
+ * @LastEditTime: 2022-08-27 10:06:16
  * @FilePath: /universal-utils/src/color.ts
  * @Description: 颜色处理
  */
@@ -276,9 +276,9 @@ export const splitGradientColor = (
 
   // 计算各节点颜色，包括开始和结尾
   const colorArr = new Array(steps).fill("").map((_, index) => {
-    const red = redStep * index + startRGBAColor.red;
-    const green = greenStep * index + startRGBAColor.green;
-    const blue = blueStep * index + startRGBAColor.blue;
+    const red = Math.ceil(redStep * index + startRGBAColor.red);
+    const green = Math.ceil(greenStep * index + startRGBAColor.green);
+    const blue = Math.ceil(blueStep * index + startRGBAColor.blue);
     return isRGB ? toRGB(red, green, blue) : toHex(red, green, blue);
   });
   return colorArr;
