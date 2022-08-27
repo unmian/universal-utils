@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-23 11:21:17
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-27 11:09:18
+ * @LastEditTime: 2022-08-27 11:51:36
  * @FilePath: /universal-utils/tests/color.test.ts
  * @Description: 颜色测试
  */
@@ -48,9 +48,9 @@ describe("func rgb2hex", () => {
 
 describe("func rgb2hex", () => {
   test("is an array", () => {
-    expect(UTILS.Color.splitGradientColor("#ed8b19", "#ffee53", 6)).toBeInstanceOf(Array);
+    expect(UTILS.Color.splitGradientColor("#000000", "#ffffff", 6)).toBeInstanceOf(Array);
   });
-  test("right length", () => {
-    expect(UTILS.Color.splitGradientColor("#ed8b19", "#ffee53", 6).length).toBe(7);
+  test("right array length", () => {
+    expect(UTILS.Color.splitGradientColor("#000000", "#ffffff", 6).length).toBe(6);
   });
 });
