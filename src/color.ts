@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-23 09:49:58
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-27 10:06:16
+ * @LastEditTime: 2022-08-27 11:10:26
  * @FilePath: /universal-utils/src/color.ts
  * @Description: 颜色处理
  */
@@ -265,17 +265,17 @@ export const splitGradientColor = (
   // 解析参数
   const startRGBAColor = parse(startColor);
   const endRGBAColor = parse(endColor);
-  if (steps < 2) {
+  if (steps < 1) {
     throw new Error(`${steps}: steps must more than 1`);
   }
 
   // 计算R\G\B每一步的差值
-  const redStep = (startRGBAColor.red - endRGBAColor.red) / steps - 1;
-  const greenStep = (startRGBAColor.green - endRGBAColor.green) / steps - 1;
-  const blueStep = (startRGBAColor.blue - endRGBAColor.blue) / steps - 1;
+  const redStep = (endRGBAColor.red - startRGBAColor.red) / steps;
+  const greenStep = (endRGBAColor.green - startRGBAColor.green) / steps;
+  const blueStep = (endRGBAColor.blue - startRGBAColor.blue) / steps;
 
   // 计算各节点颜色，包括开始和结尾
-  const colorArr = new Array(steps).fill("").map((_, index) => {
+  const colorArr = new Array(steps + 1).fill("").map((_, index) => {
     const red = Math.ceil(redStep * index + startRGBAColor.red);
     const green = Math.ceil(greenStep * index + startRGBAColor.green);
     const blue = Math.ceil(blueStep * index + startRGBAColor.blue);

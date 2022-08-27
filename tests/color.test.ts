@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-23 11:21:17
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-23 17:26:09
+ * @LastEditTime: 2022-08-27 11:09:18
  * @FilePath: /universal-utils/tests/color.test.ts
  * @Description: 颜色测试
  */
@@ -43,5 +43,14 @@ describe("func rgb2hex", () => {
   test("rgba test", () => {
     expect(UTILS.Color.rgb2hex("rgba(0,0,0,0)")).toBe("#00000000");
     expect(UTILS.Color.rgb2hex("rgba(255,255,255,1)")).toBe("#ffffffff");
+  });
+});
+
+describe("func rgb2hex", () => {
+  test("is an array", () => {
+    expect(UTILS.Color.splitGradientColor("#ed8b19", "#ffee53", 6)).toBeInstanceOf(Array);
+  });
+  test("right length", () => {
+    expect(UTILS.Color.splitGradientColor("#ed8b19", "#ffee53", 6).length).toBe(7);
   });
 });

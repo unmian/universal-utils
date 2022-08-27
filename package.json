@@ -36,8 +36,8 @@
     "dev": "vitest dev",
     "lint": "f2elint scan",
     "test": "vitest run",
-    "build": "vite build",
-    "publish:private": "pnpm build && pnpm publish --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/",
+    "prepublishOnly": "vite build",
+    "publish:private": "pnpm publish --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/",
     "unpublish:private": "pnpm unpublish  --force --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/"
   },
   "dependencies": {
