@@ -43,12 +43,16 @@
 - **Object:** 对象相关
   - **includeProperties:** 从对象中挑选属性构建新的对象
   - **excludeProperties:** 从对象中排除属性构建新的对象
+- **Word:** 单词模块
+  - **toCamelCase:** 转化为驼峰命名
+  - **toSeparatorCase:** 转化为连词命名
 
 ## 更新日志
 
 ### 0.3.0
 
 - refactor: 优化渐变颜色分段返回数据结构
+- feat: 添加单词模块
 
 ### 0.2.2
 
