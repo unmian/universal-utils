@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-23 11:12:59
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 11:50:17
+ * @LastEditTime: 2022-08-29 14:24:54
  * @FilePath: /universal-utils/config/node.config.ts
  * @Description: vite 配置文件
  */
@@ -14,15 +14,15 @@ import dts from "vite-plugin-dts";
 // 文档: https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    emptyOutDir: true,
+    emptyOutDir: false,
     lib: {
-      entry: resolve(__dirname, "../src/node/index.ts"),
-      fileName: (format) => `index.${format}.js`,
+      entry: resolve(__dirname, "../src/node.ts"),
+      fileName: (format) => `node.${format}.js`,
       formats: ["es", "cjs"],
       name: "NUTILS",
     },
     minify: true,
-    outDir: "lib/node",
+    outDir: "lib",
   },
   plugins: [
     dts({

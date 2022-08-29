@@ -2,13 +2,13 @@
  * @Author: Quarter
  * @Date: 2022-08-24 11:50:59
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 11:00:36
- * @FilePath: /universal-utils/src/browser/coding.ts
+ * @LastEditTime: 2022-08-29 14:07:47
+ * @FilePath: /universal-utils/src/coding.browser.ts
  * @Description: 编码工具
  */
 
 import { JSEncrypt } from "jsencrypt";
-import { isEmpty } from "../common/common";
+import { isEmpty } from "./common";
 
 // RSA 密钥大小
 type RSAKeySize = "512" | "1024" | "2048" | "4096";
@@ -69,4 +69,4 @@ export const RSADecrypt = (privateKey: string, raw: string, size: RSAKeySize = "
   return result;
 };
 
-export * from "../common/coding";
+export * from "./coding";

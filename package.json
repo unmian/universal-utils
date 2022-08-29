@@ -26,20 +26,17 @@
     ".": {
       "import": "./lib/index.es.js",
       "require": "./lib/index.umd.js",
-      "default": "./lib/index.es.js",
-      "types": "./types/index.d.ts"
+      "default": "./lib/index.es.js"
     },
     "./browser": {
-      "import": "./lib/browser/index.es.js",
-      "require": "./lib/browser/index.umd.js",
-      "default": "./lib/browser/index.es.js",
-      "types": "./types/browser/index.d.ts"
+      "import": "./lib/browser.es.js",
+      "require": "./lib/browser.umd.js",
+      "default": "./lib/browser.es.js"
     },
     "./node": {
-      "import": "./lib/node/index.es.js",
-      "require": "./lib/node/index.cjs.js",
-      "default": "./lib/node/index.es.js",
-      "types": "./types/node/index.d.ts"
+      "import": "./lib/node.es.js",
+      "require": "./lib/node.cjs.js",
+      "default": "./lib/node.es.js"
     }
   },
   "types": "types/index.d.ts",
