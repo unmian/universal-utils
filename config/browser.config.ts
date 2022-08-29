@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-23 11:12:59
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 11:23:18
+ * @LastEditTime: 2022-08-29 11:50:03
  * @FilePath: /universal-utils/config/browser.config.ts
  * @Description: vite 配置文件
  */
@@ -18,7 +18,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "../src/browser/index.ts"),
       fileName: (format) => `index.${format}.js`,
-      name: "UTILS",
+      name: "BUTILS",
     },
     minify: true,
     outDir: "lib/browser",

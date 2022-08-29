@@ -25,18 +25,24 @@
   "exports": {
     ".": {
       "import": "./lib/index.es.js",
-      "require": "./lib/index.umd.js"
+      "require": "./lib/index.umd.js",
+      "default": "./lib/index.es.js",
+      "types": "./types/index.d.ts"
     },
     "./browser": {
       "import": "./lib/browser/index.es.js",
-      "require": "./lib/browser/index.umd.js"
+      "require": "./lib/browser/index.umd.js",
+      "default": "./lib/browser/index.es.js",
+      "types": "./types/browser/index.d.ts"
     },
     "./node": {
       "import": "./lib/node/index.es.js",
-      "require": "./lib/node/index.umd.js"
+      "require": "./lib/node/index.cjs.js",
+      "default": "./lib/node/index.es.js",
+      "types": "./types/node/index.d.ts"
     }
   },
-  "typings": "types/index.d.ts",
+  "types": "types/index.d.ts",
   "homepage": "https://github.com/unmian/universal-utils",
   "bugs": "https://github.com/unmian/universal-utils/issues",
   "scripts": {

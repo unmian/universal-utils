@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-29 10:54:22
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 11:02:15
+ * @LastEditTime: 2022-08-29 11:42:30
  * @FilePath: /universal-utils/src/browser/index.ts
  * @Description: 浏览器端 API 入口
  */
@@ -16,7 +16,7 @@ import * as Number from "../common/number";
 import * as Object from "../common/object";
 import * as Word from "../common/word";
 
-const UTILS = {
+const BUTILS = {
   Coding,
   Color,
   Common,
@@ -28,5 +28,5 @@ const UTILS = {
   ...Common,
 };
 
-export default UTILS;
+export default BUTILS;
 export { Coding, Color, Common, Date, FormData, Number, Object, Word };
