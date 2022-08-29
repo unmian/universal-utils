@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-24 14:26:01
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 18:43:41
+ * @LastEditTime: 2022-08-29 18:51:29
  * @FilePath: /universal-utils/packages/common/src/form-data.ts
  * @Description: 表单数据工具
  */
@@ -19,9 +19,7 @@ export const toFormData = (data: object): FormData => {
   Object.keys(data).forEach((key) => {
     const value = data[key];
     if (isExist(value)) {
-      if (value instanceof File || value instanceof Blob) {
-        formData.append(key, JSON.stringify(data[key]));
-      } else if (Array.isArray(value)) {
+      if (Array.isArray(value)) {
         value.forEach((item) => {
           if (Object.prototype.toString.call(item) === "[object Object]") {
             formData.append(`${key}[]`, JSON.stringify(item));
