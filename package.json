@@ -26,6 +26,14 @@
     ".": {
       "import": "./lib/index.es.js",
       "require": "./lib/index.umd.js"
+    },
+    "./browser": {
+      "import": "./lib/browser/index.es.js",
+      "require": "./lib/browser/index.umd.js"
+    },
+    "./node": {
+      "import": "./lib/node/index.es.js",
+      "require": "./lib/node/index.umd.js"
     }
   },
   "typings": "types/index.d.ts",
@@ -36,13 +44,13 @@
     "dev": "vitest dev",
     "lint": "f2elint scan",
     "test": "vitest run",
-    "prepublishOnly": "vite build",
+    "prepublishOnly": "vite build --config ./config/common.config.ts && vite build --config ./config/browser.config.ts && vite build --config ./config/node.config.ts",
     "publish:private": "pnpm publish --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/",
     "unpublish:private": "pnpm unpublish  --force --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/"
   },
   "dependencies": {
-    "jsencrypt": "3.2.1",
-    "jshashes": "1.0.8"
+    "jsencrypt": "^3.2.1",
+    "jshashes": "^1.0.8"
   },
   "devDependencies": {
     "f2elint": "2.2.1",

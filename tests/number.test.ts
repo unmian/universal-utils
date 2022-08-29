@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-23 15:08:14
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-23 17:27:25
+ * @LastEditTime: 2022-08-29 09:43:25
  * @FilePath: /universal-utils/tests/number.test.ts
  * @Description: 数字单元测试
  */

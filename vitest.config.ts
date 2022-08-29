@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-24 14:42:56
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-24 14:44:23
+ * @LastEditTime: 2022-08-29 11:03:06
  * @FilePath: /universal-utils/vitest.config.ts
  * @Description: vitest 配置
  */
@@ -13,7 +13,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   test: {
-    environment: "jsdom",
+    // environment: "jsdom",
   },
   resolve: {
     alias: {

@@ -14,8 +14,8 @@
   - **SHA256Hash:** SHA256 散列值计算
   - **SHA512Hash:** SHA512 散列值计算
   - **RMD160Hash:** RMD160 散列值计算
-  - **RSAEncrypt:** RSA 非对称算法加密
-  - **RSADecrypt:** RSA 非对称算法解密
+  - **RSAEncrypt(Browser):** RSA 非对称算法加密
+  - **RSADecrypt(Browser):** RSA 非对称算法解密
   - **UUID:** 生成 UUID
 - **Color:** 色彩相关
   - **parse:** 按照 R、G、B、A 的结构解析颜色字符串
@@ -48,6 +48,10 @@
   - **toSeparatorCase:** 转化为连词命名
 
 ## 更新日志
+
+### 0.4.0
+
+- refactor: 拆分 node 和 browser 环境以防止依赖错误
 
 ### 0.3.0
 
