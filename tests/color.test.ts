@@ -2,12 +2,12 @@
  * @Author: Quarter
  * @Date: 2022-08-23 11:21:17
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 11:02:55
+ * @LastEditTime: 2022-08-29 18:01:37
  * @FilePath: /universal-utils/tests/color.test.ts
  * @Description: 颜色测试
  */
 
-import UTILS from "utils";
+import UTILS from "common";
 import { describe, expect, test } from "vitest";
 
 describe("func hex2rgb", () => {

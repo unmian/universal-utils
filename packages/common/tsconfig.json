@@ -13,19 +13,12 @@
     "noImplicitAny": false,
     "lib": ["esnext", "dom", "dom.iterable"],
     "baseUrl": ".",
-    "paths": {
-      "common": ["./packages/common/src/index"],
-      "common/*": ["./packages/common/src/*"],
-      "browser": ["./packages/browser/src/index"],
-      "browser/*": ["./packages/browser/src/*"],
-      "node": ["./packages/node/src/index"],
-      "node/*": ["./packages/node/src/*"]
-    },
+    "paths": {},
     "types": ["vite/client"]
   },
   "vueCompilerOptions": {
     "experimentalCompatMode": 2
   },
-  "include": ["src/**/*.ts", "tests/**/*.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "types"]
 }

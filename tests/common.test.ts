@@ -2,12 +2,12 @@
  * @Author: Quarter
  * @Date: 2022-08-23 17:27:38
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-25 11:31:45
+ * @LastEditTime: 2022-08-29 18:03:11
  * @FilePath: /universal-utils/tests/common.test.ts
  * @Description: 通用测试用例
  */
 
-import UTILS from "utils";
+import UTILS from "common";
 import { describe, expect, test } from "vitest";
 
 describe("func isNull", () => {

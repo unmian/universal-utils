@@ -2,12 +2,12 @@
  * @Author: Quarter
  * @Date: 2022-08-27 11:52:41
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-27 12:00:24
+ * @LastEditTime: 2022-08-29 18:03:24
  * @FilePath: /universal-utils/tests/word.test.ts
  * @Description: 单词工具函数测试
  */
 
-import UTILS from "utils";
+import UTILS from "common";
 import { describe, expect, test } from "vitest";
 
 describe("func toCamelCase", () => {

@@ -1,6 +1,6 @@
 {
-  "name": "@unmian/universal-utils",
-  "version": "0.4.3",
+  "name": "@unmian/universal-utils-common",
+  "version": "0.5.0",
   "author": {
     "name": "Quarter",
     "email": "master@shiruihua.cn"
@@ -16,25 +16,29 @@
     "type": "git",
     "url": "https://github.com/unmian/universal-utils"
   },
+  "files": [
+    "lib",
+    "types"
+  ],
+  "main": "lib/index.umd.js",
+  "module": "lib/index.es.js",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.es.js",
+      "require": "./lib/index.umd.js",
+      "default": "./lib/index.es.js"
+    }
+  },
   "homepage": "https://github.com/unmian/universal-utils",
   "bugs": "https://github.com/unmian/universal-utils/issues",
   "scripts": {
-    "prepare": "husky install",
-    "dev": "vitest dev",
-    "lint": "f2elint scan",
-    "test": "vitest run"
+    "prepublishOnly": "vite build",
+    "publish:private": "pnpm publish --no-git-checks --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/",
+    "unpublish:private": "pnpm unpublish  --force --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/"
   },
   "dependencies": {
     "jshashes": "^1.0.8"
-  },
-  "devDependencies": {
-    "f2elint": "2.2.1",
-    "husky": "8.0.1",
-    "jsdom": "20.0.0",
-    "typescript": "4.7.4",
-    "vite": "3.0.9",
-    "vite-plugin-dts": "1.4.1",
-    "vitest": "0.22.1"
   },
   "browserslist": [
     "> 0.5%",

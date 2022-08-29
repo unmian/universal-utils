@@ -2,13 +2,13 @@
  * @Author: Quarter
  * @Date: 2022-08-24 11:50:59
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 14:07:47
- * @FilePath: /universal-utils/src/coding.browser.ts
+ * @LastEditTime: 2022-08-29 17:24:12
+ * @FilePath: /universal-utils/packages/browser/src/coding.ts
  * @Description: 编码工具
  */
 
 import { JSEncrypt } from "jsencrypt";
-import { isEmpty } from "./common";
+import { Common } from "@unmian/universal-utils-common";
 
 // RSA 密钥大小
 type RSAKeySize = "512" | "1024" | "2048" | "4096";
@@ -20,10 +20,10 @@ type RSAKeySize = "512" | "1024" | "2048" | "4096";
  * @return {string}
  */
 export const RSAEncrypt = (publicKey: string, raw: string, size: RSAKeySize = "2048"): string => {
-  if (isEmpty(publicKey)) {
+  if (Common.isEmpty(publicKey)) {
     throw new Error("public key must be provided");
   }
-  if (isEmpty(raw)) {
+  if (Common.isEmpty(raw)) {
     throw new Error("raw must be provided");
   }
   if (window === undefined) {
@@ -48,10 +48,10 @@ export const RSAEncrypt = (publicKey: string, raw: string, size: RSAKeySize = "2
  * @return {string}
  */
 export const RSADecrypt = (privateKey: string, raw: string, size: RSAKeySize = "2048"): string => {
-  if (isEmpty(privateKey)) {
+  if (Common.isEmpty(privateKey)) {
     throw new Error("private key must be provided");
   }
-  if (isEmpty(raw)) {
+  if (Common.isEmpty(raw)) {
     throw new Error("raw must be provided");
   }
   if (window === undefined) {
@@ -68,5 +68,3 @@ export const RSADecrypt = (privateKey: string, raw: string, size: RSAKeySize = "
   }
   return result;
 };
-
-export * from "./coding";

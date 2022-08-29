@@ -2,12 +2,12 @@
  * @Author: Quarter
  * @Date: 2022-08-23 17:33:16
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-23 17:39:31
+ * @LastEditTime: 2022-08-29 18:03:20
  * @FilePath: /universal-utils/tests/object.test.ts
  * @Description: 对象工具测试用例
  */
 
-import UTILS from "utils";
+import UTILS from "common";
 import { describe, expect, test } from "vitest";
 
 describe("func includeProperties", () => {

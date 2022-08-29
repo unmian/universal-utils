@@ -1,0 +1,51 @@
+{
+  "name": "@unmian/universal-utils-browser",
+  "version": "0.5.0",
+  "author": {
+    "name": "Quarter",
+    "email": "master@shiruihua.cn"
+  },
+  "description": "Universal utils for daily development",
+  "keywords": [
+    "Javascript",
+    "TypeScript",
+    "utils"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unmian/universal-utils"
+  },
+  "files": [
+    "lib",
+    "types"
+  ],
+  "main": "lib/index.umd.js",
+  "module": "lib/index.es.js",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.es.js",
+      "require": "./lib/index.umd.js",
+      "default": "./lib/index.es.js"
+    }
+  },
+  "homepage": "https://github.com/unmian/universal-utils",
+  "bugs": "https://github.com/unmian/universal-utils/issues",
+  "scripts": {
+    "prepublishOnly": "vite build",
+    "publish:private": "pnpm publish --no-git-checks --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/",
+    "unpublish:private": "pnpm unpublish  --force --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/"
+  },
+  "dependencies": {
+    "@unmian/universal-utils-common": "workspace:^0.5.0",
+    "jsencrypt": "^3.2.1"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "ie >= 10",
+    "iOS >= 8",
+    "Android >= 4"
+  ]
+}

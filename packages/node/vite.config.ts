@@ -2,8 +2,8 @@
  * @Author: Quarter
  * @Date: 2022-08-23 11:12:59
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 14:24:54
- * @FilePath: /universal-utils/config/node.config.ts
+ * @LastEditTime: 2022-08-29 17:29:17
+ * @FilePath: /universal-utils/packages/node/vite.config.ts
  * @Description: vite 配置文件
  */
 
@@ -16,9 +16,8 @@ export default defineConfig({
   build: {
     emptyOutDir: false,
     lib: {
-      entry: resolve(__dirname, "../src/node.ts"),
-      fileName: (format) => `node.${format}.js`,
-      formats: ["es", "cjs"],
+      entry: resolve(__dirname, "src/index.ts"),
+      fileName: (format) => `index.${format}.js`,
       name: "NUTILS",
     },
     minify: true,

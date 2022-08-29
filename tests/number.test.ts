@@ -2,12 +2,12 @@
  * @Author: Quarter
  * @Date: 2022-08-23 15:08:14
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 09:43:25
+ * @LastEditTime: 2022-08-29 18:03:17
  * @FilePath: /universal-utils/tests/number.test.ts
  * @Description: 数字单元测试
  */
 
-import UTILS from "utils";
+import UTILS from "common";
 import { describe, expect, test } from "vitest";
 
 describe("func toFixed", () => {
