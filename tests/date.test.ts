@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-25 16:29:03
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 18:03:15
+ * @LastEditTime: 2022-09-19 14:32:29
  * @FilePath: /universal-utils/tests/date.test.ts
  * @Description: 日期工具函数测试
  */
@@ -32,5 +32,28 @@ describe("func formate", () => {
     expect(UTILS.Date.formate(new Date(1661416337739), "SS")).toBe("739");
     expect(UTILS.Date.formate(new Date(1661416337739), "SSS")).toBe("739");
     expect(UTILS.Date.formate(new Date(1661416337739), "yy/M/d hh:mm:ss")).toBe("22/8/25 16:32:17");
+  });
+});
+
+describe("func getMonthDays", () => {
+  test("invalid parameter", () => {
+    expect(UTILS.Date.getMonthDays(1, -1)).toBe(0);
+    expect(UTILS.Date.getMonthDays(0, 2023)).toBe(0);
+    expect(UTILS.Date.getMonthDays(13, 2023)).toBe(0);
+  });
+
+  test("valid parameter", () => {
+    expect(UTILS.Date.getMonthDays(1, 2023)).toBe(31);
+    expect(UTILS.Date.getMonthDays(2, 2023)).toBe(28);
+    expect(UTILS.Date.getMonthDays(3, 2023)).toBe(31);
+    expect(UTILS.Date.getMonthDays(4, 2023)).toBe(30);
+    expect(UTILS.Date.getMonthDays(5, 2023)).toBe(31);
+    expect(UTILS.Date.getMonthDays(6, 2023)).toBe(30);
+    expect(UTILS.Date.getMonthDays(7, 2023)).toBe(31);
+    expect(UTILS.Date.getMonthDays(8, 2023)).toBe(31);
+    expect(UTILS.Date.getMonthDays(9, 2023)).toBe(30);
+    expect(UTILS.Date.getMonthDays(10, 2023)).toBe(31);
+    expect(UTILS.Date.getMonthDays(11, 2023)).toBe(30);
+    expect(UTILS.Date.getMonthDays(12, 2023)).toBe(31);
   });
 });

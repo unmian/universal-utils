@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-24 14:42:56
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 17:58:24
+ * @LastEditTime: 2022-09-19 14:21:48
  * @FilePath: /universal-utils/vitest.config.ts
  * @Description: vitest 配置
  */
@@ -17,9 +17,9 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      browser: resolve(__dirname, "./packages/browser"),
-      common: resolve(__dirname, "./packages/common"),
-      node: resolve(__dirname, "./packages/node"),
+      browser: resolve(__dirname, "./packages/browser/src"),
+      common: resolve(__dirname, "./packages/common/src"),
+      node: resolve(__dirname, "./packages/node/src"),
     },
   },
 });

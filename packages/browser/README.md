@@ -34,6 +34,7 @@
   - **isEmpty:** 是否为 null、undefined、false 或者空字符串
 - **Date:** 日期相关
   - **formate:** Date 格式化
+  - **getMonthDays:** 获取制定月的天数
 - **FormData:** 表单数据相关
   - **toFormData:** Object 转 FormData
   - **toObject:** FormData 转 Object
