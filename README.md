@@ -54,6 +54,10 @@
 
 ## 更新日志
 
+### 0.5.4
+
+- refactor: 将 JSEncrypt 通过源码引入 
+
 ### 0.5.3
 
 - feat: Date 模块添加 getMonthDays 方法
