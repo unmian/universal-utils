@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-24 14:42:56
  * @LastEditors: Quarter
- * @LastEditTime: 2022-09-19 14:21:48
+ * @LastEditTime: 2022-10-13 15:43:31
  * @FilePath: /universal-utils/vitest.config.ts
  * @Description: vitest 配置
  */
@@ -13,7 +13,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   test: {
-    // environment: "jsdom",
+    exclude: ["node_modules", "**/*.browser.test.ts", "**/*.node.test.ts"],
   },
   resolve: {
     alias: {

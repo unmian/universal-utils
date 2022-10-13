@@ -48,6 +48,10 @@
   - **toCamelCase:** 转化为驼峰命名
   - **toSeparatorCase:** 转化为连词命名
 
+## 项目依赖
+
+- [travist/jsencrypt](https://github.com/travist/jsencrypt)
+
 ## 更新日志
 
 ### 0.5.3

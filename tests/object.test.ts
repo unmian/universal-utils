@@ -24,9 +24,7 @@ describe("func includeProperties", () => {
     expect(UTILS.Object.includeProperties({ 1: "123", 2: "234", 3: "345" }, 1)).toMatchObject({
       1: "123",
     });
-    expect(
-      UTILS.Object.includeProperties({ 1: "123", 2: "234", 3: "345" }, [2, 3]),
-    ).toMatchObject({
+    expect(UTILS.Object.includeProperties({ 1: "123", 2: "234", 3: "345" }, [2, 3])).toMatchObject({
       2: "234",
       3: "345",
     });
@@ -48,9 +46,7 @@ describe("func excludeProperties", () => {
       2: "234",
       3: "345",
     });
-    expect(
-      UTILS.Object.excludeProperties({ 1: "123", 2: "234", 3: "345" }, [2, 3]),
-    ).toMatchObject({
+    expect(UTILS.Object.excludeProperties({ 1: "123", 2: "234", 3: "345" }, [2, 3])).toMatchObject({
       1: "123",
     });
   });

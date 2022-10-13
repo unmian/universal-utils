@@ -2,13 +2,13 @@
  * @Author: Quarter
  * @Date: 2022-08-24 11:50:59
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 17:24:12
+ * @LastEditTime: 2022-10-13 14:45:10
  * @FilePath: /universal-utils/packages/browser/src/coding.ts
  * @Description: 编码工具
  */
 
-import { JSEncrypt } from "jsencrypt";
 import { Common } from "@unmian/universal-utils-common";
+import { JSEncrypt } from "./lib/jsencrypt";
 
 // RSA 密钥大小
 type RSAKeySize = "512" | "1024" | "2048" | "4096";

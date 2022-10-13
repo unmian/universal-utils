@@ -51,7 +51,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-lib
+packages/*/lib
 types
 
 # Visual Studio 2015/2017 cache/options directory

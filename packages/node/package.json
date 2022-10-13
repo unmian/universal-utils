@@ -1,6 +1,6 @@
 {
   "name": "@unmian/universal-utils-node",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "author": {
     "name": "Quarter",
     "email": "master@shiruihua.cn"
@@ -38,7 +38,7 @@
     "unpublish:private": "pnpm unpublish  --force --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/"
   },
   "dependencies": {
-    "@unmian/universal-utils-common": "workspace:^0.5.3"
+    "@unmian/universal-utils-common": "workspace:^0.5.4"
   },
   "devDependencies": {
     "f2elint": "2.2.1",

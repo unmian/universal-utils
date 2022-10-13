@@ -1,6 +1,6 @@
 {
   "name": "@unmian/universal-utils",
-  "version": "0.5.2",
+  "version": "0.5.4",
   "author": {
     "name": "Quarter",
     "email": "master@shiruihua.cn"
@@ -22,7 +22,10 @@
     "prepare": "husky install",
     "dev": "vitest dev",
     "lint": "f2elint scan",
-    "test": "vitest run"
+    "test": "pnpm run test:common && pnpm run test:browser && pnpm run test:node",
+    "test:common": "vitest run",
+    "test:browser": "vitest run --config vitest-browser.config.ts",
+    "test:node": "vitest run --config vitest-node.config.ts"
   },
   "dependencies": {
     "jshashes": "1.0.8"
