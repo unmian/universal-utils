@@ -34,8 +34,8 @@
   "bugs": "https://github.com/unmian/universal-utils/issues",
   "scripts": {
     "prepublishOnly": "vite build",
-    "publish:private": "pnpm publish --no-git-checks --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/",
-    "unpublish:private": "pnpm unpublish  --force --registry https://gitea.lescity.com.cn/api/packages/Quarter/npm/"
+    "publish:private": "pnpm publish --no-git-checks --registry https://npm.lescity.com.cn",
+    "unpublish:private": "pnpm unpublish  --force --registry https://npm.lescity.com.cn"
   },
   "dependencies": {
     "jshashes": "^1.0.8"
