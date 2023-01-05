@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-10-13 14:46:38
  * @LastEditors: Quarter
- * @LastEditTime: 2022-10-13 15:46:47
+ * @LastEditTime: 2023-01-05 14:48:09
  * @FilePath: /universal-utils/tests/coding.browser.test.ts
  * @Description:
  */

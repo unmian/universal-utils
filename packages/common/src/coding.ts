@@ -2,8 +2,8 @@
  * @Author: Quarter
  * @Date: 2022-08-24 11:50:59
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 11:00:08
- * @FilePath: /universal-utils/src/common/coding.ts
+ * @LastEditTime: 2023-01-05 14:52:14
+ * @FilePath: /universal-utils/packages/common/src/coding.ts
  * @Description: 编码工具
  */
 
@@ -116,13 +116,15 @@ export const RMD160Hash = (raw: string, uppercase = true): string => {
  */
 export const UUID = (): string => {
   const s: string[] = [];
-  const hexDigits = "0123456789abcdef";
+  const hexDigits = new Array(2).fill("0123456789abcdef").join("");
   for (let i = 0; i < 36; i++) {
-    s[i] = hexDigits.substring(Math.floor(Math.random() * 0x10), 1);
+    const index = Math.floor(Math.random() * 0x10);
+    s[i] = hexDigits.substring(index, index + 1);
   }
   s[14] = "4"; // bits 12-15 of the time_hi_and_version field to 0010
   // eslint-disable-next-line no-bitwise
-  s[19] = hexDigits.substring(((s[19] as any) & 0x3) | 0x8, 1); // bits 6-7 of the clock_seq_hi_and_reserved to 01
+  const index = ((s[19] as any) & 0x3) | 0x8;
+  s[19] = hexDigits.substring(index, index + 1); // bits 6-7 of the clock_seq_hi_and_reserved to 01
   s[8] = "-";
   s[13] = "-";
   s[18] = "-";
