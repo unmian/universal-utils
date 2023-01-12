@@ -44,6 +44,7 @@
 - **Object:** 对象相关
   - **includeProperties:** 从对象中挑选属性构建新的对象
   - **excludeProperties:** 从对象中排除属性构建新的对象
+  - **copy:** 对象深拷贝
 - **Word:** 单词模块
   - **toCamelCase:** 转化为驼峰命名
   - **toSeparatorCase:** 转化为连词命名
@@ -53,6 +54,14 @@
 - [travist/jsencrypt](https://github.com/travist/jsencrypt)
 
 ## 更新日志
+
+### 0.5.6
+
+- feat: 新增对象深拷贝方法
+
+### 0.5.5
+
+- fix: 修复 uuid 方法 substring 逻辑错误
 
 ### 0.5.4
 
