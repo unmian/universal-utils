@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2023-01-13 13:48:26
  * @LastEditors: Quarter
- * @LastEditTime: 2023-01-13 14:57:35
+ * @LastEditTime: 2023-01-13 15:39:56
  * @FilePath: /universal-utils/packages/common/src/storage.ts
  * @Description: 存储
  */
@@ -11,8 +11,6 @@ import { UUID } from "./coding";
 
 // 数据仓库
 const DATA_DEPOSITORY = new Map<string, any>();
-// 键名正则
-const KEY_REGEXP = /^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$/;
 
 /**
  * @description: 新增数据
@@ -31,14 +29,10 @@ export const add = (value: any): string => {
  * @param {any} value 数据
  * @return
  */
-export const update = (key: string, value: any): void => {
-  if (typeof key !== "string") {
-    throw new Error("key should be a string");
+export const update = (key = "", value: any = undefined): void => {
+  if (DATA_DEPOSITORY.has(key)) {
+    DATA_DEPOSITORY.set(key, value);
   }
-  if (!KEY_REGEXP.test(key)) {
-    throw new Error("key is not validated");
-  }
-  DATA_DEPOSITORY.set(key, value);
 };
 
 /**
@@ -46,14 +40,11 @@ export const update = (key: string, value: any): void => {
  * @param {string} key 键名
  * @return {any}
  */
-export const get = (key: string): any => {
-  if (typeof key !== "string") {
-    throw new Error("key should be a string");
+export const get = (key = ""): any => {
+  if (DATA_DEPOSITORY.has(key)) {
+    return DATA_DEPOSITORY.get(key);
   }
-  if (!KEY_REGEXP.test(key)) {
-    throw new Error("key is not validated");
-  }
-  return DATA_DEPOSITORY.get(key);
+  return undefined;
 };
 
 /**
@@ -61,14 +52,10 @@ export const get = (key: string): any => {
  * @param {string} key 键名
  * @return
  */
-export const remove = (key: string): void => {
-  if (typeof key !== "string") {
-    throw new Error("key should be a string");
+export const remove = (key = ""): void => {
+  if (DATA_DEPOSITORY.has(key)) {
+    DATA_DEPOSITORY.delete(key);
   }
-  if (!KEY_REGEXP.test(key)) {
-    throw new Error("key is not validated");
-  }
-  DATA_DEPOSITORY.delete(key);
 };
 
 /**
