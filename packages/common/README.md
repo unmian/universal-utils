@@ -43,6 +43,12 @@
   - **includeProperties:** 从对象中挑选属性构建新的对象
   - **excludeProperties:** 从对象中排除属性构建新的对象
   - **copy:** 对象深拷贝
+- **Storage:** 数据存储
+  - **add:** 新增数据
+  - **update:** 更新数据
+  - **get:** 获取指定数据
+  - **remove:** 移除指定数据
+  - **clear:** 清空数据
 - **Word:** 单词模块
   - **toCamelCase:** 转化为驼峰命名
   - **toSeparatorCase:** 转化为连词命名

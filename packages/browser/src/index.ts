@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-29 10:54:22
  * @LastEditors: Quarter
- * @LastEditTime: 2022-08-29 17:18:18
+ * @LastEditTime: 2023-01-13 14:51:35
  * @FilePath: /universal-utils/packages/browser/src/index.ts
  * @Description: 浏览器端 API 入口
  */
@@ -16,6 +16,7 @@ import {
   FormData,
   Number,
   Object,
+  Storage,
   Word,
 } from "@unmian/universal-utils-common";
 
@@ -37,4 +38,4 @@ const BUTILS = {
 };
 
 export default BUTILS;
-export { Coding, Color, Common, Date, FormData, Number, Object, Word };
+export { Coding, Color, Common, Date, FormData, Number, Object, Storage, Word };
