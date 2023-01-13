@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-29 10:54:22
  * @LastEditors: Quarter
- * @LastEditTime: 2023-01-13 14:51:35
+ * @LastEditTime: 2023-01-13 15:24:44
  * @FilePath: /universal-utils/packages/browser/src/index.ts
  * @Description: 浏览器端 API 入口
  */
@@ -34,6 +34,7 @@ const BUTILS = {
   FormData,
   Object,
   Word,
+  Storage,
   ...Common,
 };
 
