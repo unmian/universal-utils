@@ -45,6 +45,8 @@
   - **includeProperties:** 从对象中挑选属性构建新的对象
   - **excludeProperties:** 从对象中排除属性构建新的对象
   - **copy:** 对象深拷贝
+- **Privacy:** 隐私相关
+  - **phone:** 电话号码处理
 - **Storage:** 数据存储
   - **add:** 新增数据
   - **update:** 更新数据
@@ -60,6 +62,10 @@
 - [travist/jsencrypt](https://github.com/travist/jsencrypt)
 
 ## 更新日志
+
+### 0.6.0
+
+- feat: 新增隐私相关模块
 
 ### 0.5.9
 
