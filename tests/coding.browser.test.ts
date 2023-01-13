@@ -8,8 +8,8 @@
  */
 
 import BUTILS from "browser";
-import PublicKey from "./public-key";
-import PrivateKey from "./private-key";
+import PublicKey from "./data/public-key";
+import PrivateKey from "./data/private-key";
 import { describe, expect, test } from "vitest";
 
 describe("func RSAEncrypt And RSADecrypt", () => {
