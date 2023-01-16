@@ -53,6 +53,9 @@
   - **get:** 获取指定数据
   - **remove:** 移除指定数据
   - **clear:** 清空数据
+- **URI:** uri 相关
+  - **parse:** 解析 uri 字符串
+  - **stringify:** 将 uri 序列化数据转换为字符串
 - **Word:** 单词模块
   - **toCamelCase:** 转化为驼峰命名
   - **toSeparatorCase:** 转化为连词命名
@@ -62,6 +65,10 @@
 - [travist/jsencrypt](https://github.com/travist/jsencrypt)
 
 ## 更新日志
+
+### 0.7.0
+
+- feat: 新增 uri 相关模块
 
 ### 0.6.0
 
