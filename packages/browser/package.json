@@ -1,6 +1,6 @@
 {
   "name": "@unmian/universal-utils-browser",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "author": {
     "name": "Quarter",
     "email": "master@shiruihua.cn"
@@ -38,7 +38,7 @@
     "unpublish:private": "pnpm unpublish  --force --registry https://npm.lescity.com.cn"
   },
   "dependencies": {
-    "@unmian/universal-utils-common": "workspace:^0.7.0"
+    "@unmian/universal-utils-common": "workspace:^0.7.1"
   },
   "browserslist": [
     "> 0.5%",
