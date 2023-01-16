@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-23 09:49:40
  * @LastEditors: Quarter
- * @LastEditTime: 2023-01-13 16:59:34
+ * @LastEditTime: 2023-01-16 16:06:46
  * @FilePath: /universal-utils/packages/common/src/index.ts
  * @Description: 入口文件
  */
@@ -16,6 +16,7 @@ import * as Number from "./number";
 import * as Object from "./object";
 import * as Privacy from "./privacy";
 import * as Storage from "./storage";
+import * as URI from "./uri";
 import * as Word from "./word";
 
 const UTILS = {
@@ -28,9 +29,10 @@ const UTILS = {
   Object,
   Privacy,
   Storage,
+  URI,
   Word,
   ...Common,
 };
 
 export default UTILS;
-export { Coding, Color, Common, Date, FormData, Number, Object, Privacy, Storage, Word };
+export { Coding, Color, Common, Date, FormData, Number, Object, Privacy, Storage, URI, Word };

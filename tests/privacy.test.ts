@@ -2,10 +2,11 @@
  * @Author: Quarter
  * @Date: 2023-01-13 17:00:29
  * @LastEditors: Quarter
- * @LastEditTime: 2023-01-13 17:05:47
+ * @LastEditTime: 2023-01-16 16:08:51
  * @FilePath: /universal-utils/tests/privacy.test.ts
  * @Description: 隐私相关单元测试
  */
+
 import UTILS from "common";
 import { describe, expect, test } from "vitest";
 
