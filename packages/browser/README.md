@@ -6,6 +6,18 @@
 
 目前本项目中包含以下模块：
 
+- **Browser:** 浏览器相关
+  - **whichBrowser:** 获取浏览器
+  - **whichRenderingEngine:** 获取浏览器内核
+  - **getBrowserInfo:** 获取浏览器信息
+  - **isChrome:** 是否为 Chrome 浏览器
+  - **isFirefox:** 是否为 Firefox 浏览器
+  - **isSafari:** 是否为 Safari 浏览器
+  - **isWebkit:** 是否为 Webkit 内核
+  - **isGecko:** 是否为 Gecko 内核
+- **Clipboard:** 剪切板相关
+  - **write:** 将文本写入剪贴板
+  - **read:** 读取剪贴板文本
 - **Coding:** 编码相关
   - **Base64Encoding:** Base64 编码
   - **Base64Decoding:** Base64 解码

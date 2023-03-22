@@ -1,6 +1,6 @@
 {
   "name": "@unmian/universal-utils-node",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "author": {
     "name": "Quarter",
     "email": "master@shiruihua.cn"
@@ -38,7 +38,7 @@
     "unpublish:private": "pnpm unpublish  --force --registry https://npm.lescity.com.cn"
   },
   "dependencies": {
-    "@unmian/universal-utils-common": "workspace:^0.7.1"
+    "@unmian/universal-utils-common": "workspace:^0.8.0"
   },
   "devDependencies": {
     "f2elint": "2.2.1",

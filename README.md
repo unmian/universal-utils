@@ -6,6 +6,18 @@
 
 目前本项目中包含以下模块：
 
+- **Browser(Browser):** 浏览器相关
+  - **whichBrowser(Browser):** 获取浏览器
+  - **whichRenderingEngine(Browser):** 获取浏览器内核
+  - **getBrowserInfo(Browser):** 获取浏览器信息
+  - **isChrome(Browser):** 是否为 Chrome 浏览器
+  - **isFirefox(Browser):** 是否为 Firefox 浏览器
+  - **isSafari(Browser):** 是否为 Safari 浏览器
+  - **isWebkit(Browser):** 是否为 Webkit 内核
+  - **isGecko(Browser):** 是否为 Gecko 内核
+- **Clipboard(Browser):** 剪切板相关
+  - **write(Browser):** 将文本写入剪贴板
+  - **read(Browser):** 读取剪贴板文本
 - **Coding:** 编码相关
   - **Base64Encoding:** Base64 编码
   - **Base64Decoding:** Base64 解码
@@ -66,6 +78,10 @@
 
 ## 更新日志
 
+### 0.8.0
+
+- feat: 新增浏览器和剪切板模块
+
 ### 0.7.1
 
 - refactor: uri 序列化数据新增 fullPath 字段
@@ -84,7 +100,7 @@
 
 ### 0.5.8
 
-- fix: 修复Storage导出问题
+- fix: 修复 Storage 导出问题
 
 ### ~~0.5.7~~
 
