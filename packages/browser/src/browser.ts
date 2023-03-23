@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2023-03-22 10:28:30
  * @LastEditors: Quarter
- * @LastEditTime: 2023-03-22 16:05:22
+ * @LastEditTime: 2023-03-23 16:06:42
  * @FilePath: /universal-utils/packages/browser/src/browser.ts
  * @Description: 浏览器判断
  */
@@ -10,7 +10,7 @@
 // 浏览器类型
 export type BrowserType = "Chrome" | "Firefox" | "Safari" | "Other";
 // 浏览器内核
-export type BrowserRenderingEngine = "Gecko" | "AppleWebKit" | "Other";
+export type BrowserRenderingEngine = "Gecko" | "WebKit" | "Other";
 // 浏览器信息
 export interface BrowserInfo {
   browser: BrowserType; // 浏览器类型
@@ -46,7 +46,7 @@ export const whichRenderingEngine = (): BrowserRenderingEngine => {
   const { userAgent } = navigator;
   // 识别内核
   if (userAgent.includes("AppleWebKit")) {
-    renderingEngine = "AppleWebKit";
+    renderingEngine = "WebKit";
   } else if (userAgent.includes("Gecko")) {
     renderingEngine = "Gecko";
   }
@@ -97,7 +97,7 @@ export const isSafari = (): boolean => whichBrowser() === "Safari";
  * @description: 是否是 WebKit 浏览器
  * @return {boolean}
  */
-export const isWebkit = (): boolean => whichRenderingEngine() === "AppleWebKit";
+export const isWebkit = (): boolean => whichRenderingEngine() === "WebKit";
 
 /**
  * @description: 是否是 Gecko 内核
