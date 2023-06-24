@@ -1,5 +1,5 @@
 {
-  "name": "@unmian/universal-utils-common",
+  "name": "@smartcity/universal-utils-common",
   "version": "0.8.0",
   "author": {
     "name": "Quarter",
@@ -14,7 +14,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/unmian/universal-utils"
+    "url": "https://gitea.lescity.com.cn/smartcity/universal-utils"
   },
   "files": [
     "lib",
@@ -30,12 +30,11 @@
       "default": "./lib/index.es.js"
     }
   },
-  "homepage": "https://github.com/unmian/universal-utils",
-  "bugs": "https://github.com/unmian/universal-utils/issues",
+  "homepage": "https://gitea.lescity.com.cn/smartcity/universal-utils",
+  "bugs": "https://gitea.lescity.com.cn/smartcity/universal-utils/issues",
   "scripts": {
-    "prepublishOnly": "vite build",
-    "publish:private": "pnpm publish --no-git-checks --registry https://npm.lescity.com.cn",
-    "unpublish:private": "pnpm unpublish  --force --registry https://npm.lescity.com.cn"
+    "build": "vite build",
+    "publish": "pnpm run build && pnpm publish --no-git-checks"
   },
   "dependencies": {
     "jshashes": "^1.0.8"

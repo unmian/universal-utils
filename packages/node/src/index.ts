@@ -19,7 +19,7 @@ import {
   Storage,
   URI,
   Word,
-} from "@unmian/universal-utils-common";
+} from "@smartcity/universal-utils-common";
 
 const NUTILS = {
   Coding,

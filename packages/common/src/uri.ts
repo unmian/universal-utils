@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2023-01-16 14:47:36
  * @LastEditors: Quarter
- * @LastEditTime: 2023-01-16 17:03:57
+ * @LastEditTime: 2023-05-17 17:15:26
  * @FilePath: /universal-utils/packages/common/src/uri.ts
  * @Description: uri 模块
  */
@@ -74,7 +74,11 @@ export const parse = (uri: string): URISerialization => {
         .forEach((str) => {
           const equalSign = str.indexOf("=");
           if (equalSign > -1) {
-            Reflect.set(result.query, str.substring(0, equalSign), str.substring(equalSign + 1));
+            Reflect.set(
+              result.query,
+              str.substring(0, equalSign),
+              decodeURIComponent(str.substring(equalSign + 1)),
+            );
           }
         });
     }

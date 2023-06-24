@@ -2,7 +2,7 @@
  * @Author: Quarter
  * @Date: 2022-08-29 10:54:22
  * @LastEditors: Quarter
- * @LastEditTime: 2023-03-22 16:28:43
+ * @LastEditTime: 2023-04-05 18:32:24
  * @FilePath: /universal-utils/packages/browser/src/index.ts
  * @Description: 浏览器端 API 入口
  */
@@ -22,7 +22,7 @@ import {
   Storage,
   URI,
   Word,
-} from "@unmian/universal-utils-common";
+} from "@smartcity/universal-utils-common";
 
 const Coding = {
   ...CommonCoding,

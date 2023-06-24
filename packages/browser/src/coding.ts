@@ -7,7 +7,7 @@
  * @Description: 编码工具
  */
 
-import { Common } from "@unmian/universal-utils-common";
+import { Common } from "@smartcity/universal-utils-common";
 import { JSEncrypt } from "./lib/jsencrypt";
 
 // RSA 密钥大小

@@ -1,5 +1,5 @@
 {
-  "name": "@unmian/universal-utils",
+  "name": "@smartcity/universal-utils",
   "version": "0.8.0",
   "author": {
     "name": "Quarter",
@@ -14,18 +14,23 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/unmian/universal-utils"
+    "url": "https://gitea.lescity.com.cn/smartcity/universal-utils"
   },
-  "homepage": "https://github.com/unmian/universal-utils",
-  "bugs": "https://github.com/unmian/universal-utils/issues",
+  "homepage": "https://gitea.lescity.com.cn/smartcity/universal-utils",
+  "bugs": "https://gitea.lescity.com.cn/smartcity/universal-utils/issues",
   "scripts": {
     "prepare": "husky install",
     "dev": "vitest dev",
     "lint": "f2elint scan",
     "test": "pnpm run test:common && pnpm run test:browser && pnpm run test:node",
+    "build": "pnpm run build:common && pnpm run build:browser && pnpm run build:node",
+    "publish": "pnpm run build && pnpm run test && pnpm -r run publish",
     "test:common": "vitest run",
     "test:browser": "vitest run --config vitest-browser.config.ts",
-    "test:node": "vitest run --config vitest-node.config.ts"
+    "test:node": "vitest run --config vitest-node.config.ts",
+    "build:common": "pnpm -r --filter @smartcity/universal-utils-common run build",
+    "build:browser": "pnpm -r --filter @smartcity/universal-utils-browser run build",
+    "build:node": "pnpm -r --filter @smartcity/universal-utils-node run build"
   },
   "dependencies": {
     "jshashes": "1.0.8"

@@ -78,6 +78,10 @@
 
 ## 更新日志
 
+### 0.8.1
+
+- refactor: 调整浏览器内核 AppleWebKit 为 WebKit
+
 ### 0.8.0
 
 - feat: 新增浏览器和剪切板模块
